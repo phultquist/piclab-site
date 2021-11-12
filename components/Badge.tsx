@@ -6,5 +6,5 @@ type BadgeProps = {
 };
 
 export default function Badge({ text }): FunctionComponent<BadgeProps> {
-  return <p className="border border-secondary text-secondary py-1 px-2 inline-block rounded-lg uppercase">{text}</p>;
+  return <p className="border font-idlewind border-secondary text-secondary py-1 px-2 inline-block rounded-lg uppercase">{text}</p>;
 }
