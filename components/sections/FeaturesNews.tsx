@@ -21,7 +21,7 @@ const FeaturesNews: FunctionComponent<FeaturesNewsProps> = props => {
             }}
         >
             <div className="pt-20">
-                <h2 className="text-white text-center text-3xl mx-auto">
+                <h2 className="text-white text-center text-3xl mx-auto px-4">
                     <RichText render={props.headline} />
                 </h2>
                 <div className="px-12 flex flex-row overflow-x-scroll space-x-3 mt-20 items-stretch pb-4">

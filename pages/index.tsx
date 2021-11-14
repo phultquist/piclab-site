@@ -63,7 +63,7 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
             backgroundSize: 'cover',
             boxShadow: '0px 94px 114px rgba(0, 0, 0, 0.25);',
           }}>
-          <div className="m-auto z-10 space-y-8 w-[30rem] max-w-screen-2xl">
+          <div className="m-auto z-10 space-y-8 w-[30rem] max-w-screen-2xl px-4">
             <p className="text-center text-white text-3xl"><RichText render={props.get_started_title} /></p>
             <EmailForm />
           </div>

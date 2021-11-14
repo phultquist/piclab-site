@@ -14,7 +14,7 @@ const NavBar: FunctionComponent = () => {
             <Logo />
           </div>
         </div>
-        <div className="my-auto text-right w-1/3">
+        <div className="my-auto text-right w-1/2 md:w-1/3">
           <button className="text-primary font-bold hover:bg-gray-100 rounded-md py-2 px-4 mr-2 transition-all">
             <i aria-hidden className="fas fa-sign-in fa-lg mr-2" />
             Sign In

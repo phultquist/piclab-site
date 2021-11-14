@@ -57,7 +57,7 @@ const AI: FunctionComponent<AIProps> = props => {
             className="absolute object-contain w-[90rem] z-0"
         />
         <div className="relative p-2 h-full w-full flex flex-row justify-between py-20">
-            <div className="relative z-0">
+            <div className="relative z-0 w-0 md:w-auto">
                 {motionTags.map(tag => (
                     <motion.div
                         key={tag.text}
@@ -68,7 +68,7 @@ const AI: FunctionComponent<AIProps> = props => {
                     </motion.div>
                 ))}
             </div>
-            <div className="w-full lg:w-2/5 xl:w-1/3 pr-20 py-10 z-10 relative">
+            <div className="w-full lg:w-2/5 xl:w-1/3 pr-0 md:pr-20 py-10 z-10 relative">
                 <Card>
                     <CardBody>
                         <CardSummary>{props.summary}</CardSummary>

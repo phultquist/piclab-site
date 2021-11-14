@@ -45,7 +45,7 @@ const AI: FunctionComponent<HeroProps> = props => {
 
     return (
         <section className="min-h-screen lg:h-screen lg:min-h-[40rem] grid grid-cols-3 relative">
-            <div className="col-span-3 lg:col-span-1 ml-20 pb-12 lg:pb-36 pt-10 h-full flex flex-col space-y-8 justify-between">
+            <div className="col-span-3 lg:col-span-1 ml-6 md:ml-20 pb-12 lg:pb-36 pt-10 h-full flex flex-col space-y-8 justify-between">
                 <div className="py-10 w-40 h-20 relative">
                     <Logo colors='white' />
                 </div>
@@ -89,7 +89,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                     className="absolute bottom-0 hidden lg:block -translate-y-14"
                                 />
                             </div>
-                            <div className="absolute w-full h-[80%] translate-x-0 lg:translate-x-24 bottom-32 lg:bottom-0 scale-50 md:scale-75 lg:scale-100" >
+                            <div className="absolute w-full h-[80%] translate-x-0 lg:translate-x-24 bottom-32 lg:bottom-0 scale-[0.25] md:scale-75 lg:scale-100" >
                                 {/*  translate-x-24 translate-y-36 */}
                                 <Tag text="Scene" className="absolute right-48 top-48 shadow-2xl" />
                                 <Tag text="Water" className="absolute left-[28rem] top-96 shadow-2xl" />

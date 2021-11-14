@@ -7,7 +7,7 @@ interface ElementProps {
 }
 
 const Card: FunctionComponent<ElementProps> = props => {
-  return <div className="bg-white rounded-2xl shadow-md p-2 pb-0 max-w-[90vw]">{props.children}</div>;
+  return <div className="bg-white rounded-2xl shadow-md p-2 pb-0 max-w-[90vw] mx-auto">{props.children}</div>;
 }
 
 const CardHeader: FunctionComponent<ElementProps> = props => {
