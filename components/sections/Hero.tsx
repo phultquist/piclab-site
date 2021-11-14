@@ -89,7 +89,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                     className="absolute bottom-0 hidden lg:block -translate-y-14"
                                 />
                             </div>
-                            <div className="absolute w-full h-[80%] translate-x-0 lg:translate-x-24 bottom-32 lg:bottom-0 scale-[0.25] md:scale-75 lg:scale-100" >
+                            <div className="absolute w-full h-[80%] translate-x-0 lg:translate-x-24 bottom-32 lg:bottom-0 scale-[0.25] sm:scale-50 md:scale-75 lg:scale-100" >
                                 {/*  translate-x-24 translate-y-36 */}
                                 <Tag text="Scene" className="absolute right-48 top-48 shadow-2xl" />
                                 <Tag text="Water" className="absolute left-[28rem] top-96 shadow-2xl" />
