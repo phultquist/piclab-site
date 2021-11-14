@@ -16,10 +16,6 @@ module.exports = {
       colors: {
         primary: "#e84f5a",
         secondary: "#54fff0",
-        gradient: {
-          "ai-start": "#32152f",
-          "ai-end": "#30184c",
-        },
       },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
@@ -28,6 +24,9 @@ module.exports = {
       backdropBlur: {
         xs: '2px'
       },
+      boxShadow: {
+        '3xl': '0 0px 60px -15px rgba(0, 0, 0, 0.3)',
+      }
     },
   },
   variants: {

@@ -5,7 +5,6 @@ export {
   CardBody,
   CardSummary,
   CardDescription,
-  CardImage
 } from "./Card";
 export { default as NavBar } from "./NavBar";
 export { default as EmailForm } from "./EmailForm";

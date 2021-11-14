@@ -5,12 +5,12 @@ import { EmailForm, Logo } from "./";
 const NavBar: FunctionComponent = () => {
   return (
     <div className="fixed bottom-4 px-4 w-full z-50">
-      <div className="rounded-xl bg-white flex flex-row justify-between w-full overflow-hidden p-2 shadow-lg">
+      <div className="rounded-xl shadow-3xl bg-white flex flex-row justify-between w-full overflow-hidden p-2 ">
         <div className="hidden w-1/3 md:block">
           <EmailForm border />
         </div>
         <div className="my-auto text-center w-1/3">
-          <div className="w-28 md:mx-auto">
+          <div className="w-28 m-2 md:p-0 md:mx-auto">
             <Logo />
           </div>
         </div>

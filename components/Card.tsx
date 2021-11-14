@@ -1,37 +1,30 @@
 import React, { FunctionComponent } from "react";
 import Image from 'next/image';
+import { PrismicImage } from '../utils/types';
 
-const Card: FunctionComponent<{ children: Element | Element[] }> = props => {
-  return <div className="bg-white rounded-2xl shadow-md p-2">{props.children}</div>;
+interface ElementProps {
+  children: JSX.Element | JSX.Element[] | string;
 }
 
-const CardHeader: FunctionComponent<{ children: React.Component }> = props => {
-  return <h3 className="p-4 text-2xl">{props.children}</h3>;
+const Card: FunctionComponent<ElementProps> = props => {
+  return <div className="bg-white rounded-2xl shadow-md p-2 pb-0 max-w-[90vw]">{props.children}</div>;
 }
 
-const CardBody: FunctionComponent<{ children: React.Component }> = props => {
+const CardHeader: FunctionComponent<ElementProps> = props => {
+  return <h3 className="p-4 text-2xl strong-primary">{props.children}</h3>;
+}
+
+const CardBody: FunctionComponent<ElementProps> = props => {
   return <div className="p-6">{props.children}</div>;
 }
 
-const CardSummary: FunctionComponent<{ children: React.Component | Element | string }> = props => {  
+const CardSummary: FunctionComponent<ElementProps> = props => {
   return <div className="p-4 text-gray-400 text-xs">{props.children}</div>;
 }
 
-const CardDescription: FunctionComponent<{ children: React.Component }> = props => {
-  return <div className="p-4 text-gray-600 text-s">{props.children}</div>;
-}
-
-const CardImage: FunctionComponent<{ src: string }> = props => {
-  return (
-    <>
-      <img src={props.src} alt="" className="rounded-xl" />
-      {/* <div className="w-full h-full overflow-hidden bg-red-500">
-        <Image src={props.src} layout="fill" />
-      </div> */}
-    </>
-    // <img className="h-32 w-full object-cover" src={src} alt="Card Image" />
-  );
+const CardDescription: FunctionComponent<ElementProps> = props => {
+  return <div className="p-4 text-gray-500 text-s">{props.children}</div>;
 }
 
 export default Card;
-export { CardHeader, CardBody, CardSummary, CardDescription, CardImage };
+export { CardHeader, CardBody, CardSummary, CardDescription };
