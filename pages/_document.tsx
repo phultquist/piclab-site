@@ -12,6 +12,7 @@ class PiclabSite extends Document {
                 <Head>
                     <link rel="stylesheet" href="https://cloud.typography.com/6929016/7418832/css/fonts.css" />
                     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+                    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
                     <script src="https://kit.fontawesome.com/117bcfe378.js" crossOrigin="anonymous" async />
                     <meta name="theme-color" content="black" />
                 </Head>
