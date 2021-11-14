@@ -42,9 +42,8 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
         <title>PicLab - Home</title>
       </Head>
       <main>
-        <Hero tagline={props.tagline} description={props.description} badge={props.badge} />
         <NavBar />
-
+        <Hero tagline={props.tagline} description={props.description} badge={props.badge} />
         <AI
           headline={props.headline}
           tags={props.tags.map(tag => tag.text)}

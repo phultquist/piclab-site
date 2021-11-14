@@ -34,7 +34,7 @@ const AI: FunctionComponent<AIProps> = props => {
         text: tag,
         y: 0,
         x: 0,
-        startX: Math.random() * 800,
+        startX: Math.random() * 400,
         startY: (i * 50 + 100 + (Math.random() - 1) * 30),
         speed: Math.random() / 4 + 0.05,
     }));
@@ -68,7 +68,7 @@ const AI: FunctionComponent<AIProps> = props => {
                     </motion.div>
                 ))}
             </div>
-            <div className="w-full md:w-2/3 lg:w-2/5 xl:w-1/3 pr-20 py-10 z-10 relative">
+            <div className="w-full lg:w-2/5 xl:w-1/3 pr-20 py-10 z-10 relative">
                 <Card>
                     <CardBody>
                         <CardSummary>{props.summary}</CardSummary>

@@ -1,4 +1,5 @@
 # Keep in mind
+1. SEO optimization
 2. Optimize for mobile
 3. Ensure Typescript types are correct
 4. Use `next/image`
