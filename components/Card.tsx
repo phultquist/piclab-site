@@ -1,30 +1,37 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
+import Image from 'next/image';
 
-export default function Card({ children }): FunctionComponent {
-  return <div className="bg-white rounded-2xl shadow-md p-2">{children}</div>;
+const Card: FunctionComponent<{ children: Element | Element[] }> = props => {
+  return <div className="bg-white rounded-2xl shadow-md p-2">{props.children}</div>;
 }
 
-export function CardHeader({ children }): FunctionComponent {
-  return <h3 className="p-4 text-2xl">{children}</h3>;
+const CardHeader: FunctionComponent<{ children: React.Component }> = props => {
+  return <h3 className="p-4 text-2xl">{props.children}</h3>;
 }
 
-export function CardBody({ children }): FunctionComponent {
-  return <div className="p-9">{children}</div>;
+const CardBody: FunctionComponent<{ children: React.Component }> = props => {
+  return <div className="p-6">{props.children}</div>;
 }
 
-export function CardSummary({ children }): FunctionComponent {
-  return <div className="p-4 text-gray-400 text-xs">{children}</div>;
+const CardSummary: FunctionComponent<{ children: React.Component | Element | string }> = props => {  
+  return <div className="p-4 text-gray-400 text-xs">{props.children}</div>;
 }
 
-export function CardDescription({ children }): FunctionComponent {
-  return <div className="p-4 text-gray-600 text-s">{children}</div>;
+const CardDescription: FunctionComponent<{ children: React.Component }> = props => {
+  return <div className="p-4 text-gray-600 text-s">{props.children}</div>;
 }
 
-export function CardImage({ src }): FunctionComponent {
+const CardImage: FunctionComponent<{ src: string }> = props => {
   return (
     <>
-      <img src="Showoff.png" alt="" className="rounded-xl" />
+      <img src={props.src} alt="" className="rounded-xl" />
+      {/* <div className="w-full h-full overflow-hidden bg-red-500">
+        <Image src={props.src} layout="fill" />
+      </div> */}
     </>
     // <img className="h-32 w-full object-cover" src={src} alt="Card Image" />
   );
 }
+
+export default Card;
+export { CardHeader, CardBody, CardSummary, CardDescription, CardImage };
