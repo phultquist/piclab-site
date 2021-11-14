@@ -3,3 +3,4 @@
 2. Optimize for mobile
 3. Ensure Typescript types are correct
 4. Use `next/image`
+5. Favicon

@@ -9,6 +9,9 @@ module.exports = {
   // },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fill: theme => ({
+      'green': theme('colors.green.500'),
+    }),
     extend: {
       colors: {
         primary: "#e84f5a",
@@ -20,7 +23,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-        idlewind: ["Idlewind", ...defaultTheme.fontFamily.sans],
+        idlewild: ["'Idlewild A', 'Idlewild B'"],
+      },
+      backdropBlur: {
+        xs: '2px'
       },
     },
   },

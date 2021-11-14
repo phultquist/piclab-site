@@ -8,5 +8,6 @@ export {
   CardImage
 } from "./Card";
 export { default as NavBar } from "./NavBar";
-export { default as SignUp } from "./SignUp";
+export { default as EmailForm } from "./EmailForm";
 export { default as Badge } from "./Badge";
+export { default as Logo } from "./Logo";
