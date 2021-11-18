@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import {
     useViewportScroll,
     motion,
@@ -29,7 +29,10 @@ interface AIProps {
 
 const AI: FunctionComponent<AIProps> = props => {
     const { scrollY } = useViewportScroll();
+    const [scrollValue, setScrollValue] = useState(scrollY.get());
     const waveY = useTransform(scrollY, [0, 1000], [300, 200], { clamp: false });
+    const tagsY = useTransform(scrollY, [0, 1], [0, 1], { clamp: false });
+
     const initialTags = props.tags.map((tag, i) => ({
         text: tag,
         y: 0,
@@ -40,14 +43,23 @@ const AI: FunctionComponent<AIProps> = props => {
     }));
     const [motionTags, setMotionTags] = useState<MotionTag[]>(initialTags);
 
-    useEffect(() => {
-        setMotionTags(motionTags.map(tag => ({ ...tag, x: tag.startX + scrollY.get() * tag.speed, y: tag.startY })));
-    }, [scrollY, motionTags]);
+    const motionTagsNoRenderRef = useNoRenderRef<MotionTag[]>(motionTags);
+
+    function useNoRenderRef<T>(currentValue: T) {
+        const ref = useRef<T>(currentValue);
+        ref.current = currentValue;
+        return ref;
+    }
+
+    scrollY.onChange(value => {
+        console.log(value);
+
+        setScrollValue(value);
+    })
 
     return (<section className="relative bg-gray-800 z-20 overflow-hidden">
         <div
-            className="h-full w-full absolute opacity-100"
-            style={{ backgroundImage: 'url("/images/news-glow.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}
+            className="h-full w-full absolute opacity-100 ai-glow"
         ></div>
 
         <motion.img
@@ -58,15 +70,15 @@ const AI: FunctionComponent<AIProps> = props => {
         />
         <div className="relative p-2 h-full w-full flex flex-row justify-between py-20">
             <div className="relative z-0 w-0 md:w-auto">
-                {motionTags.map(tag => (
-                    <motion.div
-                        key={tag.text}
+                {motionTags.map((tag, index) => {
+                    return <motion.div
+                        key={tag.text + index.toString()}
                         className=""
-                        style={{ y: tag.y, x: tag.x }}
+                        style={{ y: tag.startY, x: tag.startX + scrollValue * tag.speed, }}
                     >
                         <Tag text={tag.text} />
                     </motion.div>
-                ))}
+                })}
             </div>
             <div className="w-full lg:w-2/5 xl:w-1/3 pr-0 md:pr-20 py-10 z-10 relative">
                 <Card>
