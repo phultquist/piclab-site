@@ -31,7 +31,6 @@ const AI: FunctionComponent<AIProps> = props => {
     const { scrollY } = useViewportScroll();
     const [scrollValue, setScrollValue] = useState(scrollY.get());
     const waveY = useTransform(scrollY, [0, 1000], [300, 200], { clamp: false });
-    const tagsY = useTransform(scrollY, [0, 1], [0, 1], { clamp: false });
 
     const initialTags = props.tags.map((tag, i) => ({
         text: tag,
@@ -43,19 +42,11 @@ const AI: FunctionComponent<AIProps> = props => {
     }));
     const [motionTags, setMotionTags] = useState<MotionTag[]>(initialTags);
 
-    const motionTagsNoRenderRef = useNoRenderRef<MotionTag[]>(motionTags);
-
-    function useNoRenderRef<T>(currentValue: T) {
-        const ref = useRef<T>(currentValue);
-        ref.current = currentValue;
-        return ref;
-    }
-
     scrollY.onChange(value => {
         console.log(value);
 
         setScrollValue(value);
-    })
+    });
 
     return (<section className="relative bg-gray-800 z-20 overflow-hidden">
         <div
