@@ -43,8 +43,6 @@ const AI: FunctionComponent<AIProps> = props => {
     const [motionTags] = useState<MotionTag[]>(initialTags);
 
     scrollY.onChange(value => {
-        console.log(value);
-
         setScrollValue(value);
     });
 
