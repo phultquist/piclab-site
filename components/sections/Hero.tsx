@@ -69,6 +69,9 @@ const AI: FunctionComponent<HeroProps> = props => {
                 <div className="relative h-full">
                     <div className="absolute bottom-0 right-0 w-full h-full overflow-hidden">
                         <div className="relative h-full lg:h-[120%] lg:w-[120%]">
+                            {
+
+                            }
                             <div className="block lg:hidden">
                                 <Image
                                     src={Laptop}
@@ -76,6 +79,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                     layout="fill"
                                     objectPosition=""
                                     objectFit="contain"
+                                    priority
                                     className="block lg:hidden"
                                 />
                             </div>
@@ -86,6 +90,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                     layout="fill"
                                     objectPosition="right bottom"
                                     objectFit="contain"
+                                    priority
                                     className="absolute bottom-0 hidden lg:block -translate-y-14"
                                 />
                             </div>
@@ -99,6 +104,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                             src={Person}
                                             alt="Person Image"
                                             layout="fill"
+                                            priority
                                             objectPosition="right bottom"
                                             objectFit="contain"
                                             className="absolute bottom-0"
@@ -111,6 +117,7 @@ const AI: FunctionComponent<HeroProps> = props => {
                                         src={Desk}
                                         alt="Desk Image"
                                         layout="fill"
+                                        priority
                                         objectPosition="right bottom"
                                         objectFit="contain"
                                         className="absolute bottom-0"

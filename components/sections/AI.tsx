@@ -40,7 +40,7 @@ const AI: FunctionComponent<AIProps> = props => {
         startY: (i * 50 + 100 + (Math.random() - 1) * 30),
         speed: Math.random() / 4 + 0.05,
     }));
-    const [motionTags, setMotionTags] = useState<MotionTag[]>(initialTags);
+    const [motionTags] = useState<MotionTag[]>(initialTags);
 
     scrollY.onChange(value => {
         console.log(value);
