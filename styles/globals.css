@@ -9,9 +9,3 @@ body {
 .strong-primary strong {
   @apply text-primary font-semibold;
 }
-
-.ai-glow {
-  background-image: 'url("/images/news-glow.png")';
-  background-position: 'center';
-  background-size: 'cover'
-}

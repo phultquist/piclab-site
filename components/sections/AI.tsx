@@ -48,7 +48,8 @@ const AI: FunctionComponent<AIProps> = props => {
 
     return (<section className="relative bg-gray-800 z-20 overflow-hidden">
         <div
-            className="h-full w-full absolute opacity-100 ai-glow"
+            className="h-full w-full absolute opacity-100"
+            style={{ backgroundImage: 'url("/images/news-glow.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}
         ></div>
 
         <motion.img
